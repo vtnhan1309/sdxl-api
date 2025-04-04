@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# Environment directories
+env/
+venv/
+.venv/
+env.bak/
+venv.bak/
+
+# FastAPI-related
+*.log
+*.sqlite3
+*.db
+
+# IDE/editor folders and files
+.vscode/
+.idea/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# pytest
+.cache/
+
+# Coverage reports
+.coverage
+*.coverage
+nosetests.xml
+coverage.xml
+*.hypothesis/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# VSCode settings
+.vscode/settings.json

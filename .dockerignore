@@ -1,0 +1,50 @@
+# Python-related files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment directories
+env/
+venv/
+.venv/
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# IDE/editor folders and files
+.vscode/
+.idea/
+
+# Docker-related files
+.dockerignore
+Dockerfile
+docker-compose.override.yml
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Coverage reports
+.coverage
+*.coverage
+nosetests.xml
+coverage.xml
+*.hypothesis/
+
+# Test files (optional, if you don't want to include test files)
+tests/
+
+# MyPy cache (optional, if you're using type-checking)
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Temporary files and folders
+*.bak
+*.swp
