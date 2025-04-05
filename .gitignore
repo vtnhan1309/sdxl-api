@@ -1,3 +1,6 @@
+weights/
+notebooks/
+
 # Python
 __pycache__/
 *.pyc

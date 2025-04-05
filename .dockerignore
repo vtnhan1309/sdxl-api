@@ -1,3 +1,6 @@
+weights/
+notebooks/
+
 # Python-related files
 __pycache__/
 *.pyc
@@ -22,6 +25,7 @@ venv/
 .dockerignore
 Dockerfile
 docker-compose.override.yml
+docker-compose.yml
 
 # System files
 .DS_Store

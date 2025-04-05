@@ -5,3 +5,4 @@ accelerate==1.6.0
 fastapi==0.115.12
 xformer==1.0.1
 bentoml==1.4.7
+pytest==8.3.5

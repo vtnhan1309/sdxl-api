@@ -5,5 +5,5 @@ base_sdxl_pipeline = DiffusionPipeline.from_pretrained("stabilityai/stable-diffu
                                          torch_dtype=torch.float16, 
                                          use_safetensors=True, 
                                          variant="fp16")
-output_dir = '/network-volume/sd/sdxl-base'
+output_dir = './weights/sdxl-base'
 base_sdxl_pipeline.save_pretrained(output_dir, safe_serialization=True)
