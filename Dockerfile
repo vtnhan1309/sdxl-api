@@ -17,4 +17,4 @@ EXPOSE 8000
 COPY . .
 
 # Command to run FastAPI with uvicorn
-CMD ["bentoml", "serve", "bento_serving.py" ,"--host", "0.0.0.0", "--port", "8000"]
+# CMD ["bentoml", "serve", "bento_serving.py" ,"--host", "0.0.0.0", "--port", "8000"]
