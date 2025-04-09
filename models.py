@@ -1,6 +1,7 @@
 import pydantic
 from pydantic import ConfigDict, validator
 from typing_extensions import ClassVar, List, Literal, Union
+import config
 
 
 class BaseModel(pydantic.BaseModel):
@@ -46,7 +47,7 @@ class ImageRequest(BaseModel):
 
     @validator("model")
     def check_valid_model(cls, v):
-        if v != 'stabilityai/stable-diffusion-xl-base-1.0':
+        if v not in config.MODEL_NAMES:
             raise ValueError("model is not found")
         return v
 
@@ -76,8 +77,6 @@ class ImageRequest(BaseModel):
         self.check_valid_n(self.n)
         self.check_valid_height(self.height)
         self.check_valid_width(self.width)
-
-
 
 class ImageChoicesData(BaseModel):
     # response index

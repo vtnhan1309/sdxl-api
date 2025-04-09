@@ -15,7 +15,7 @@ export default function () {
   // });
 
   // Sample POST request to the /items endpoint
-  const payload = JSON.stringify({
+  const payloadSDXL = JSON.stringify({
     prompt: 'a boy',
     negative_prompt: 'bad quality',
     model: 'stabilityai/stable-diffusion-xl-base-1.0',
@@ -24,6 +24,25 @@ export default function () {
     height: 512,
     width: 512
   });
+
+  const payloadFluxDex = JSON.stringify({
+    prompt: 'a boy',
+    negative_prompt: 'bad quality',
+    model: 'black-forest-labs/FLUX.1-dev',
+    steps: 30,
+    n: 1,
+    height: 1024,
+    width: 1024
+  });
+
+  const payload = Math.random() > 0.5 ? payloadSDXL : payloadFluxDex;
+  // Define different sleep times based on the chosen payload
+  let sleepTime = 0;
+  if (payload === payloadSDXL) {
+    sleepTime = 3;
+  } else {
+    sleepTime = 10;
+  }
 
   const params = {
     headers: { 'Content-Type': 'application/json' },
@@ -34,6 +53,5 @@ export default function () {
     'create item status is 200': (r) => r.status === 200,
   });
 
-  sleep(3); // Simulate user thinking
+  sleep(sleepTime); // Simulate user thinking
 }
-
